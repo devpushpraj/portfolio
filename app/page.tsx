@@ -46,6 +46,47 @@ export default function Home() {
           ))}
         </div>
       </section>
+      {/* 3. Projects Gallery */}
+      <section className="max-w-6xl mx-auto px-6 py-24 border-t border-white/5">
+        <h2 className="text-2xl font-bold mb-12 border-l-4 border-blue-600 pl-4 uppercase tracking-widest text-blue-500">Featured Projects</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Project 1 */}
+          <div className="group relative p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/[0.07] transition-all overflow-hidden">
+            <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs font-mono text-blue-400">JAVA / OOPS</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-4">Library Management System</h3>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              A robust backend application built with Java to manage book inventory, member records, and transaction logs with efficient data handling.
+            </p>
+            <div className="flex gap-4">
+              <span className="text-sm text-blue-400 font-medium">#Java</span>
+              <span className="text-sm text-blue-400 font-medium">#FileHandling</span>
+            </div>
+          </div>
+
+          {/* Project 2 */}
+          <div className="group relative p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/[0.07] transition-all overflow-hidden">
+            <div className="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs font-mono text-blue-400">NEXT.JS / TAILWIND</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-4">Professional Portfolio V2</h3>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              A high-performance modern portfolio featuring glassmorphism design, responsive layouts, and optimized SEO using the latest Next.js features.
+            </p>
+            <div className="flex gap-4">
+              <span className="text-sm text-blue-400 font-medium">#React</span>
+              <span className="text-sm text-blue-400 font-medium">#TailwindCSS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Footer / Contact Info */}
+      <footer className="py-20 text-center border-t border-white/5">
+        <p className="text-gray-500">© 2026 Pushpraj Singh. Built with ❤️ and Next.js</p>
+      </footer>
     </main>
   );
 }
