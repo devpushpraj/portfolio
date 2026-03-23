@@ -82,6 +82,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* 4. Contact Section */}
+      <section id="contact" className="max-w-4xl mx-auto px-6 py-24 border-t border-white/5">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Get In Touch</h2>
+          <p className="text-gray-400">Have a project in mind or just want to say hi? My inbox is always open.</p>
+        </div>
+
+        <form className="grid grid-cols-1 gap-6 bg-white/5 p-8 rounded-3xl border border-white/10 shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-400">Your Name</label>
+              <input type="text" className="w-full bg-[#0a0a0a] border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Pushpraj Singh" />
+            </div>
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-400">Email Address</label>
+              <input type="email" className="w-full bg-[#0a0a0a] border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" placeholder="name@example.com" />
+            </div>
+          </div>
+          <div>
+            <label className="block mb-2 text-sm font-medium text-gray-400">Message</label>
+            <textarea rows={4} className="w-full bg-[#0a0a0a] border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Hey, let's build something cool!"></textarea>
+          </div>
+          <button type="submit" className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-600/20 transition-all active:scale-[0.98]">
+            Send Message
+          </button>
+        </form>
+      </section>
 
       {/* 4. Footer / Contact Info */}
       <footer className="py-20 text-center border-t border-white/5">
