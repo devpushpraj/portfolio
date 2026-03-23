@@ -1,99 +1,51 @@
-import Link from "next/link";
-import { HeroSection } from "@/components/hero-section";
-import { SectionHeading } from "@/components/section-heading";
-import { SkillBadge } from "@/components/skill-badge";
-import { ProjectCard } from "@/components/project-card";
-import { BlogCard } from "@/components/blog-card";
-import { getFeaturedProjects, getLatestBlogs } from "@/lib/data";
-import { skills } from "@/lib/mock-data";
-
-export default async function HomePage() {
-  const [featuredProjects, latestBlogs] = await Promise.all([
-    getFeaturedProjects(),
-    getLatestBlogs()
-  ]);
-
+export default function Home() {
   return (
-    <>
-      <HeroSection />
+    <main className="min-h-screen bg-[#050505] text-white selection:bg-blue-500/30">
+      {/* 1. Hero Section */}
+      <section className="flex flex-col items-center justify-center pt-32 pb-20 px-6">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[400px] bg-blue-600/10 blur-[120px] -z-10" />
+        
+        <div className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-blue-400 uppercase bg-blue-400/10 rounded-full border border-blue-400/20">
+          Open for Opportunities
+        </div>
+        
+        <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-center bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+          Pushpraj Singh
+        </h1>
+        
+        <p className="mt-8 text-lg md:text-xl text-gray-400 max-w-2xl text-center leading-relaxed">
+          Computer Science Student & Full Stack Developer. Specialized in <span className="text-white">Java, C++</span> and building high-performance web applications.
+        </p>
 
-      <section className="section-gap">
-        <div className="wrapper">
-          <div className="section-panel px-6 py-8 sm:px-10 sm:py-10">
-            <SectionHeading
-              eyebrow="Skills & Tools"
-              title="The stack I reach for when building products that need to move fast and hold up."
-              description="From UI architecture to backend delivery, I favor tools that keep the product elegant under pressure."
-            />
-            <div className="flex flex-wrap gap-3">
-              {skills.map((skill) => (
-                <SkillBadge key={skill} label={skill} />
-              ))}
+        <div className="mt-12 flex gap-6">
+  <a 
+    href="https://github.com/devpushpraj" 
+    target="_blank" 
+    className="px-10 py-4 bg-white text-black font-bold rounded-xl hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+  >
+    View GitHub
+  </a>
+  <a 
+    href="https://www.linkedin.com/in/pushpraj-singh99" 
+    target="_blank" 
+    className="px-10 py-4 border border-white/10 bg-white/5 rounded-xl hover:bg-white/10 transition-all font-bold"
+  >
+    LinkedIn
+  </a>
+</div>
+      </section>
+
+      {/* 2. Skills Section */}
+      <section className="max-w-5xl mx-auto px-6 py-20">
+        <h2 className="text-2xl font-bold mb-10 border-l-4 border-blue-600 pl-4">Technical Skills</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {['Java', 'C++', 'Next.js', 'Tailwind CSS', 'JavaScript', 'Statistics', 'Video Editing', 'Git'].map((skill) => (
+            <div key={skill} className="p-4 bg-white/5 border border-white/10 rounded-2xl text-center hover:border-blue-500/50 transition-all group">
+              <p className="text-gray-400 group-hover:text-white font-medium">{skill}</p>
             </div>
-          </div>
+          ))}
         </div>
       </section>
-
-      <section className="section-gap">
-        <div className="wrapper">
-          <div className="mb-10 flex items-end justify-between gap-4">
-            <SectionHeading
-              eyebrow="Featured Work"
-              title="A few product systems and interfaces I’ve built recently."
-            />
-            <Link href="/projects" className="hidden text-sm font-medium sm:block">
-              View all projects
-            </Link>
-          </div>
-          <div className="grid gap-6 lg:grid-cols-2">
-            {featuredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-gap">
-        <div className="wrapper">
-          <div className="mb-10 flex items-end justify-between gap-4">
-            <SectionHeading
-              eyebrow="Writing"
-              title="Recent notes on product engineering, system design, and practical frontend work."
-            />
-            <Link href="/blog" className="hidden text-sm font-medium sm:block">
-              Browse all posts
-            </Link>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {latestBlogs.map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-gap">
-        <div className="wrapper">
-          <div className="section-panel grid gap-6 px-8 py-8 sm:grid-cols-[1fr_auto] sm:items-center sm:px-10 sm:py-10">
-            <div>
-              <p className="text-sm uppercase tracking-[0.28em] text-secondary">Start a Project</p>
-              <h2 className="mt-3 font-display text-3xl font-semibold">
-                Need a polished portfolio, internal tool, or content-driven product?
-              </h2>
-              <p className="mt-4 max-w-2xl text-foreground/75">
-                I work across UX, frontend systems, backend integrations, and
-                shipping discipline.
-              </p>
-            </div>
-            <Link
-              href="/contact"
-              className="inline-flex h-fit rounded-full bg-primary px-6 py-3 text-sm font-medium text-white"
-            >
-              Contact Me
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
+    </main>
   );
 }
