@@ -34,8 +34,8 @@ export default function Home() {
   const socials = [
     { name: 'GitHub', icon: <GithubIcon />, link: 'https://github.com/devpushpraj' },
     { name: 'LinkedIn', icon: <LinkedInIcon />, link: 'https://www.linkedin.com/in/pushpraj-singh99' },
-    { name: 'Twitter', icon: <Globe />, link: 'https://twitter.com/devpushpraj' },
-    { name: 'YouTube', icon: <YoutubeIcon />, link: 'https://www.youtube.com/@PushprajRunVlogs' },
+    { name: 'Twitter', icon: <Globe />, link: 'https://x.com/pushpraj_css' },
+    { name: 'YouTube', icon: <YoutubeIcon />, link: 'https://www.youtube.com/@madebypxbytes' },
     { name: 'Instagram', icon: <InstagramIcon />, link: 'https://www.instagram.com/pushprajgrows/' },
     { name: 'Mail', icon: <Mail />, link: '#contact' },
   ];
