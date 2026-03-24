@@ -109,6 +109,22 @@ export default function Home() {
       </div>
     </a>
 
+      <a 
+  href="https://github.com/devpushpraj/portfolio/blob/main/ATMSimulator.java" 
+  target="_blank"
+  className="group p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-blue-500/50 hover:bg-blue-500/5 transition-all text-left"
+>
+  <div className="flex justify-between items-start mb-4">
+    <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Java ATM Simulator</h3>
+    <Globe className="w-5 h-5 text-gray-500 group-hover:text-blue-400" />
+  </div>
+  <p className="text-gray-400 mb-6 leading-relaxed">A command-line banking application built with Java, focusing on security logic, balance management, and OOPs concepts.</p>
+  <div className="flex gap-2">
+    <span className="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full uppercase">Java</span>
+    <span className="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full uppercase">Logic Building</span>
+  </div>
+</a>
+
   </div>
 </section>
 
