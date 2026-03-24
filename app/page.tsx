@@ -70,34 +70,73 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* 3. Projects Section */}
-      <section id="projects" className="max-w-6xl mx-auto px-6 py-24 border-t border-white/5">
-        <h2 className="text-3xl font-bold mb-12 text-blue-500 uppercase tracking-widest text-left">Selected Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="group p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-blue-500/50 transition-all text-left">
-            <h3 className="text-2xl font-bold mb-4 text-white">Library Management System</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">A robust backend application built with Java to manage book tracking and user database.</p>
-            <span className="text-xs font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full uppercase">Java / OOPs</span>
-          </div>
-          <div className="group p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-blue-500/50 transition-all text-left">
-            <h3 className="text-2xl font-bold mb-4 text-white">Interactive Portfolio V2</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">Modern web experience built with Next.js 15, Tailwind CSS, and optimized for performance.</p>
-            <span className="text-xs font-bold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full uppercase">Next.js / Tailwind</span>
-          </div>
-        </div>
-      </section>
+      {/* 3. Projects Section - Clickable Cards */}
+<section id="projects" className="max-w-6xl mx-auto px-6 py-24 border-t border-white/5">
+  <h2 className="text-3xl font-bold mb-12 text-blue-500 uppercase tracking-widest text-left">Selected Projects</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    
+    {/* Project 1 - Clickable */}
+    <a 
+      href="https://github.com/devpushpraj/library-mgmt" // <--- Apna GitHub link yahan dalo
+      target="_blank"
+      className="group p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-blue-500/50 hover:bg-blue-500/5 transition-all text-left"
+    >
+      <div className="flex justify-between items-start mb-4">
+        <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Library Management System</h3>
+        <Globe className="w-5 h-5 text-gray-500 group-hover:text-blue-400" />
+      </div>
+      <p className="text-gray-400 mb-6 leading-relaxed">A robust backend application built with Java to manage book tracking and user database.</p>
+      <div className="flex gap-2">
+        <span className="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full uppercase">Java</span>
+        <span className="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full uppercase">MySQL</span>
+      </div>
+    </a>
 
-      {/* 4. Skills Grid */}
-      <section className="max-w-6xl mx-auto px-6 py-20 text-left">
-        <h2 className="text-xl font-bold mb-10 text-gray-500 uppercase tracking-widest">Technical Arsenal</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {['Java', 'C++', 'Next.js', 'Tailwind', 'JavaScript', 'Statistics', 'Git', 'Video Editing'].map((skill) => (
-            <div key={skill} className="p-4 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-white/10 transition-all">
-              <p className="text-gray-300 font-medium">{skill}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+    {/* Project 2 - Clickable */}
+    <a 
+      href="https://pushpraj-portfolio-drab.vercel.app/" // <--- Live link yahan dalo
+      target="_blank"
+      className="group p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-purple-500/50 hover:bg-purple-500/5 transition-all text-left"
+    >
+      <div className="flex justify-between items-start mb-4">
+        <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">Interactive Portfolio V2</h3>
+        <Globe className="w-5 h-5 text-gray-500 group-hover:text-purple-400" />
+      </div>
+      <p className="text-gray-400 mb-6 leading-relaxed">Modern web experience built with Next.js 15, Tailwind CSS, and Framer Motion.</p>
+      <div className="flex gap-2">
+        <span className="text-[10px] font-bold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full uppercase">Next.js</span>
+        <span className="text-[10px] font-bold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full uppercase">Tailwind</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+{/* 4. Technical Arsenal - Clickable Skill Badges */}
+<section className="max-w-6xl mx-auto px-6 py-20 text-left">
+  <h2 className="text-xl font-bold mb-10 text-gray-500 uppercase tracking-widest">Technical Arsenal</h2>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {[
+      { name: 'Java', link: 'https://www.java.com/' },
+      { name: 'C++', link: 'https://isocpp.org/' },
+      { name: 'Next.js', link: 'https://nextjs.org/' },
+      { name: 'Tailwind', link: 'https://tailwindcss.com/' },
+      { name: 'JavaScript', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+      { name: 'Statistics', link: '#' },
+      { name: 'Git', link: 'https://github.com/' },
+      { name: 'Video Editing', link: '#' }
+    ].map((skill) => (
+      <a 
+        key={skill.name} 
+        href={skill.link}
+        target="_blank"
+        className="p-4 bg-white/5 border border-white/10 rounded-xl text-center hover:bg-white/10 hover:border-blue-500/50 transition-all cursor-pointer group"
+      >
+        <p className="text-gray-300 font-medium group-hover:text-white group-hover:scale-110 transition-all">{skill.name}</p>
+      </a>
+    ))}
+  </div>
+</section>
 
       {/* 5. Contact Form Section */}
       <section id="contact" className="max-w-2xl mx-auto px-6 py-32">
