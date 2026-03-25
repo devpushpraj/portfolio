@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Mail, Globe } from 'lucide-react';
+import { ContactForm } from "@/components/contact-form";
 
 export default function Home() {
   const containerVariants = {
@@ -155,21 +156,7 @@ export default function Home() {
 </section>
 
       {/* 5. Contact Form Section */}
-      <section id="contact" className="max-w-2xl mx-auto px-6 py-32">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-black mb-4 text-white">Get In Touch</h2>
-          <p className="text-gray-400 text-lg">Want to discuss a project? My inbox is always open.</p>
-        </div>
-        <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
-          <input type="hidden" name="access_key" value="2e19e60e-d1f0-4d98-9982-4eb7a3dae261" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" name="name" placeholder="Name" className="w-full p-4 bg-white/5 border border-white/10 rounded-xl focus:border-blue-500 outline-none transition-all text-white" required />
-            <input type="email" name="email" placeholder="Email" className="w-full p-4 bg-white/5 border border-white/10 rounded-xl focus:border-blue-500 outline-none transition-all text-white" required />
-          </div>
-          <textarea name="message" placeholder="Message" rows={5} className="w-full p-4 bg-white/5 border border-white/10 rounded-xl focus:border-blue-500 outline-none transition-all text-white" required></textarea>
-          <button type="submit" className="w-full py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-blue-600/20 uppercase tracking-widest">Send Message</button>
-        </form>
-      </section>
+      <ContactForm />
 
       <footer className="py-10 text-center text-gray-600 text-sm border-t border-white/5">© 2026 Pushpraj Singh • Built with Next.js & Framer Motion</footer>
     </main>
