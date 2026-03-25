@@ -111,7 +111,7 @@ export default function Home() {
     </a>
     {/* Project 3 - Clickable */}
       <a 
-  href="https://github.com/devpushpraj/portfolio/blob/main/ATMSimulator.java" 
+  href="https://github.com/devpushpraj/ATM-Simulator-Java-MySQL" 
   target="_blank"
   className="group p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-blue-500/50 hover:bg-blue-500/5 transition-all text-left"
 >
