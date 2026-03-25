@@ -77,7 +77,7 @@ export default function Home() {
     
     {/* Project 1 - Clickable */}
     <a 
-      href="https://github.com/devpushpraj/library-mgmt" // <--- Apna GitHub link yahan dalo
+      href="https://github.com/devpushpraj/Java-Library-System"  // <--- Apna GitHub link yahan dalo
       target="_blank"
       className="group p-8 bg-white/5 border border-white/10 rounded-3xl hover:border-blue-500/50 hover:bg-blue-500/5 transition-all text-left"
     >
@@ -89,6 +89,7 @@ export default function Home() {
       <div className="flex gap-2">
         <span className="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full uppercase">Java</span>
         <span className="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full uppercase">MySQL</span>
+        <span className="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full uppercase">JDBC</span>
       </div>
     </a>
 
@@ -108,7 +109,7 @@ export default function Home() {
         <span className="text-[10px] font-bold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full uppercase">Tailwind</span>
       </div>
     </a>
-
+    {/* Project 3 - Clickable */}
       <a 
   href="https://github.com/devpushpraj/portfolio/blob/main/ATMSimulator.java" 
   target="_blank"
@@ -123,8 +124,7 @@ export default function Home() {
     <span className="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full uppercase">Java</span>
     <span className="text-[10px] font-bold text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full uppercase">Logic Building</span>
   </div>
-</a>
-
+ </a>
   </div>
 </section>
 
